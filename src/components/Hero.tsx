@@ -3,13 +3,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/eae31167-5a34-4771-8646-3cd5cae7662c.png')`
         }}
       />
       
@@ -27,6 +34,7 @@ const Hero = () => {
         <Button 
           size="lg" 
           className="bg-rust-orange hover:bg-terracotta text-white px-8 py-4 text-lg font-semibold rounded-none transition-all duration-300 transform hover:scale-105"
+          onClick={scrollToContact}
         >
           Solicite um Orçamento
           <ArrowRight className="ml-2 h-5 w-5" />

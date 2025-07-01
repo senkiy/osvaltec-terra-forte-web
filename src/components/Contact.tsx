@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, MapPin, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-warm-beige">
+    <section id="contact-section" className="py-20 bg-warm-beige">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
